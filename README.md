@@ -18,7 +18,7 @@ The parameter slack is defined for reach task as LS-ES. A task is critical if an
 
 ### Description, in english
 This algorithm simulates the completion of a project by executing subtasks that each require a certain amount of time to finish.
-These tasks are input into the algorithm, each with a name (any positive number),a time required to complete (given as a number), 
+These tasks are input into the algorithm, each with a name (any positive number), a time required to complete (given as a number), 
 and the names of any prerequisite tasks (such that these tasks must be completed before this task begins).
 
 The format for this input would be in a text file, with the following format:
@@ -36,7 +36,7 @@ Each task has several fields to help us determine an optimal schedule:
 - Slack
 - Critical Status
 
-`Slack` is the amount of time task can be delayed without affecting project finish time  
+`Slack` is the amount of time a task can be delayed without affecting project finish time  
 A task is considered `critical` only if its slack value = 0
   
   
