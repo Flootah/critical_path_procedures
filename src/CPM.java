@@ -12,7 +12,7 @@ public class CPM {
 		ArrayList<Node> nodes = new ArrayList<Node>();
 		while(exit == false) {
 			sc = new Scanner(System.in);
-			System.out.println("Please enter file input");
+			System.out.println("Please enter a file with input values");
 			String response = sc.next();
 			if(response.equals("exit")) System.exit(0);
 			
@@ -119,7 +119,8 @@ public class CPM {
 	}
 	
     private static void printTasks(ArrayList<Integer> nodeorder) {
-    	System.out.println("Tasks inputted and have been determined to be processed in following order:");
+    	System.out.println("Task input accepted!");
+    	System.out.println("Task processing order will be the following:");
 		for(int i = 0; i < nodeorder.size(); i++) {
 			System.out.print(nodeorder.get(i) + " ");
 		}
@@ -128,7 +129,7 @@ public class CPM {
     }
 
     private static void printNodes(ArrayList<Node> nodes, ArrayList<Integer> order) {
-    	System.out.printf("%-7s %-7s %-7s %-7s %-7s %-7s %-7s", "Node", "ES", "EF", "LS", "LF", "Slack", "Critical?" );
+    	System.out.printf("%-7s %-7s %-7s %-7s %-7s %-7s %-7s", "Task", "ES", "EF", "LS", "LF", "Slack", "Critical?" );
     	System.out.println();
 		for(int i = 0; i < nodes.size(); i++) {
 			Node node = findNode(order.get(i), nodes);
@@ -138,7 +139,11 @@ public class CPM {
 			System.out.printf("%-8s", node.LS);
 			System.out.printf("%-8s", node.LF);
 			System.out.printf("%-8s", node.slack);
-			if(node.critical) System.out.printf("%-7s", "!");
+			if(node.critical) { 
+				System.out.printf("%-8s", "!"); 
+			} else { 
+				System.out.printf("%-8s", ""); 
+			}
 			System.out.println();
 		}
 		
