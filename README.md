@@ -40,7 +40,7 @@ Each task has several fields to help us determine an optimal schedule:
 A task is considered `critical` only if its slack value = 0
   
   
-Example input (p4input.txt):  
+Example input (testdata.txt):  
 ```    task 0 2  
     task 1 0 4  
     task 2 0 5  
@@ -80,28 +80,25 @@ Once complete, we can easily find the critical path and output the results.
 Example Output:
 ```
 Please enter file input
-p4input.txt
+testdata.txt
 Tasks inputted and have been determined to be processed in following order:
-0 1 2 3 4 5 6 7 8 9 10 11 12 14 15 13 
+0 1 2 3 4 5 6 7 8 9 10 11 12 
 ----------------------------------------------------------------------------------
 Node    ES      EF      LS      LF      Slack   Critical?
-0       0       5       0       5       0       !      
-1       5       9       12      16      7       
-2       5       10      11      16      6       
-3       5       14      5       14      0       !      
-4       9       12      24      27      15      
-5       14      16      16      18      2       
-6       16      17      27      28      11      
-7       16      26      18      28      2       
-8       14      25      14      25      0       !      
-9       26      32      28      34      2       
-10      25      34      25      34      0       !      
-11      25      33      26      34      1       
-12      34      41      34      41      0       !      
-14      0       12      0       12      0       !      
-15      0       6       6       12      6       
-13      12      14      12      14      0       !      
+0       0       2       0       2       0       !      
+1       2       6       9       13      7       
+2       2       7       8       13      6       
+3       2       11      2       11      0       !      
+4       6       9       21      24      15      
+5       11      13      13      15      2       
+6       13      14      24      25      11      
+7       13      23      15      25      2       
+8       11      22      11      22      0       !      
+9       23      29      25      31      2       
+10      22      31      22      31      0       !      
+11      22      30      23      31      1       
+12      31      38      31      38      0       !      
 
 Critical Path is as follows:
-0 3 8 10 12 14 13
+0 3 8 10 12 
 ```
