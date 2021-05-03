@@ -22,7 +22,7 @@ These tasks are input into the algorithm, each with a name (any positive number)
 and the names of any prerequisite tasks (such that these tasks must be completed before this task begins).
 
 The format for this input would be in a text file, with the following format:
-- each line represents a task, and must begin with "task"
+- each line represents a task, and must begin with the string "task"
 - following the "task" string, a set of at least two numbers should be input, with the following format:
   - the first number represents the task's name
   - the last number represents the task's time to complete
