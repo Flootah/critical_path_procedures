@@ -41,7 +41,8 @@ A task is considered `critical` only if its slack value = 0
   
   
 Example input (testdata.txt):  
-```    task 0 2  
+```
+    task 0 2  
     task 1 0 4  
     task 2 0 5  
     task 3 0 9  
