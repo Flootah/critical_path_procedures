@@ -1,4 +1,4 @@
-# Project 4
+# Task Critical Path Procedure
 ### Description, as given
 The Critical Path Procedure (CPM) can be described as follows:
 We assume there are a precedence constraints described by acyclic graph and there is only one final task( if there is no final task you may create a dummy task with zero time  to complete). 
